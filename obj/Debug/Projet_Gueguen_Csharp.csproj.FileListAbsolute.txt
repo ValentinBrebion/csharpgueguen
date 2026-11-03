@@ -1,0 +1,122 @@
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.exe.config
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.exe
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.pdb
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Properties.Resources.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.GenerateResource.cache
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.CopyComplete
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.exe
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.pdb
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Form_Connexion_Gueguen.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\Guna.UI2.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionFacture.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionStock.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionCommandes.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionEmploye.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormProfil.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Statistiques_Gueguen.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.AssemblyReference.cache
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Buffers.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Memory.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Buffers.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Memory.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutCommandeEmpor.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutCommandeSurPlace.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutEmploye.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Form_GestionProduitStock.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.exe.config
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.exe
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.pdb
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Guna.UI2.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Buffers.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Memory.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.dll
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Buffers.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Memory.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.xml
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.AssemblyReference.cache
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutCommandeEmpor.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutCommandeSurPlace.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutEmploye.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionCommandes.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionEmploye.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionFacture.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionStock.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormProfil.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Form_Connexion_Gueguen.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Form_GestionProduitStock.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Properties.Resources.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Statistiques_Gueguen.resources
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.GenerateResource.cache
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.CopyComplete
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.exe
+C:\Users\Mon Poste\Desktop\AP4\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.pdb
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.exe.config
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.exe
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Projet_Gueguen_Csharp.pdb
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\Guna.UI2.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Buffers.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Memory.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.dll
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Buffers.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Memory.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\bin\Debug\MySql.Data.xml
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.AssemblyReference.cache
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutCommandeEmpor.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutCommandeSurPlace.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormAjoutEmploye.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionCommandes.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionEmploye.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionFacture.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormGestionStock.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormProfil.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Form_Connexion_Gueguen.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Form_GestionProduitStock.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Properties.Resources.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.Statistiques_Gueguen.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.GenerateResource.cache
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.csproj.CopyComplete
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.exe
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.pdb
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormReglerNote.resources
+C:\Users\vbbre\OneDrive\Bureau\BTS SIO\AP4\application c#\Projet_Gueguen_Csharp\projet gueguen\CsharpGueguen\Projet_Gueguen_Csharp\obj\Debug\Projet_Gueguen_Csharp.FormReglerFacture.resources

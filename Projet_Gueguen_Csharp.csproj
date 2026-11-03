@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87BC67D2-AFDD-4CD1-9C4C-FB87A014FD21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Projet_Gueguen_Csharp</RootNamespace>
+    <AssemblyName>Projet_Gueguen_Csharp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.2, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.2\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.EntityFramework, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALLERGENE.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ASSEOIR.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AVIS.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIE.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CLIENT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMMANDE.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMMANDEAEMPORTER.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="COMMANDESURPLACE.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CUISINER.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DETAILS.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIRIGEANT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DIRIGER.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="failed_jobs.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormAjoutCommandeEmpor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjoutCommandeEmpor.Designer.cs">
+      <DependentUpon>FormAjoutCommandeEmpor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAjoutCommandeSurPlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjoutCommandeSurPlace.Designer.cs">
+      <DependentUpon>FormAjoutCommandeSurPlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAjoutEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAjoutEmploye.Designer.cs">
+      <DependentUpon>FormAjoutEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionCommandes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionCommandes.Designer.cs">
+      <DependentUpon>FormGestionCommandes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionEmploye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionEmploye.Designer.cs">
+      <DependentUpon>FormGestionEmploye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionFacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionFacture.Designer.cs">
+      <DependentUpon>FormGestionFacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionStock.Designer.cs">
+      <DependentUpon>FormGestionStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProfil.Designer.cs">
+      <DependentUpon>FormProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReglerFacture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReglerFacture.Designer.cs">
+      <DependentUpon>FormReglerFacture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReglerNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReglerNote.Designer.cs">
+      <DependentUpon>FormReglerNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Connexion_Gueguen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Connexion_Gueguen.Designer.cs">
+      <DependentUpon>Form_Connexion_Gueguen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GestionProduitStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GestionProduitStock.Designer.cs">
+      <DependentUpon>Form_GestionProduitStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GERER.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetRestauByMatriculeDirigeant_Result.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUEGUEN.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GUEGUEN.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUEGUEN.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GUEGUEN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GUEGUEN.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="HISTORIQUEREAPRO.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListeCommandeEmportV2.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListeCommandeSurPlaceDate.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="migrations.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modele_gueguen.cs" />
+    <Compile Include="password_resets.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="personal_access_tokens.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PRODUIT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RESTAURANT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SERVEUR.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Statistiques_Gueguen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistiques_Gueguen.Designer.cs">
+      <DependentUpon>Statistiques_Gueguen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TABLECLIENT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRANSPORT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPEPAIMENT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TYPERESTAURANT.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vue_RechercheClientDSRestaurant.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Facture.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_stock3.cs">
+      <DependentUpon>GUEGUEN.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAjoutCommandeEmpor.resx">
+      <DependentUpon>FormAjoutCommandeEmpor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjoutCommandeSurPlace.resx">
+      <DependentUpon>FormAjoutCommandeSurPlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAjoutEmploye.resx">
+      <DependentUpon>FormAjoutEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionCommandes.resx">
+      <DependentUpon>FormGestionCommandes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionEmploye.resx">
+      <DependentUpon>FormGestionEmploye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionFacture.resx">
+      <DependentUpon>FormGestionFacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionStock.resx">
+      <DependentUpon>FormGestionStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProfil.resx">
+      <DependentUpon>FormProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReglerFacture.resx">
+      <DependentUpon>FormReglerFacture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReglerNote.resx">
+      <DependentUpon>FormReglerNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Connexion_Gueguen.resx">
+      <DependentUpon>Form_Connexion_Gueguen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GestionProduitStock.resx">
+      <DependentUpon>Form_GestionProduitStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Statistiques_Gueguen.resx">
+      <DependentUpon>Statistiques_Gueguen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="GUEGUEN.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GUEGUEN.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GUEGUEN.edmx.diagram">
+      <DependentUpon>GUEGUEN.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo gueguen remove.png" />
+    <None Include="Resources\fond_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GUEGUEN.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GUEGUEN.edmx</DependentUpon>
+      <LastGenOutput>GUEGUEN.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="GUEGUEN.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GUEGUEN.edmx</DependentUpon>
+      <LastGenOutput>GUEGUEN.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

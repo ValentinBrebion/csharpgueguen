@@ -1,0 +1,951 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GUEGUENModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ALLERGENE">
+    <Key>
+      <PropertyRef Name="ID_ALLERGENE" />
+    </Key>
+    <Property Name="ID_ALLERGENE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOM_ALLERGENE" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="DESCRIPTION_ALLERGENE" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ASSEOIR">
+    <Key>
+      <PropertyRef Name="ID_TABLE" />
+      <PropertyRef Name="ID_CLIENT" />
+      <PropertyRef Name="DATECLIENTASSEOIR" />
+    </Key>
+    <Property Name="ID_TABLE" Type="int" Nullable="false" />
+    <Property Name="ID_CLIENT" Type="int" Nullable="false" />
+    <Property Name="DATECLIENTASSEOIR" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AVIS">
+    <Key>
+      <PropertyRef Name="ID_RESTAURANT" />
+      <PropertyRef Name="ID_CLIENT" />
+    </Key>
+    <Property Name="ID_RESTAURANT" Type="int" Nullable="false" />
+    <Property Name="ID_CLIENT" Type="int" Nullable="false" />
+    <Property Name="NOTE_RESTO" Type="double" Nullable="false" />
+    <Property Name="COMMENTAIRE_CLIENT" Type="varchar" MaxLength="2000" />
+    <Property Name="dateavis" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CATEGORIE">
+    <Key>
+      <PropertyRef Name="ID_CATEGORIE" />
+    </Key>
+    <Property Name="ID_CATEGORIE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOM_CATEGORIE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IMAGE_CATEGORIE" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENT">
+    <Key>
+      <PropertyRef Name="ID_CLIENT" />
+    </Key>
+    <Property Name="ID_CLIENT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="PRENOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="MAIL_CLIENT" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="email_verified_at" Type="timestamp" Precision="0" />
+    <Property Name="password" Type="char" MaxLength="255" Nullable="false" />
+    <Property Name="remember_token" Type="varchar" MaxLength="100" />
+    <Property Name="DATENAISS_CLIENT" Type="date" Nullable="false" />
+    <Property Name="created_at" Type="timestamp" Precision="0" />
+    <Property Name="updated_at" Type="timestamp" Precision="0" />
+    <Property Name="url_img_profil" Type="varchar" MaxLength="512" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMMANDE">
+    <Key>
+      <PropertyRef Name="NUMERO_COMMANDE" />
+    </Key>
+    <Property Name="NUMERO_COMMANDE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPAIMENT" Type="int" />
+    <Property Name="ID_CLIENT" Type="int" Nullable="false" />
+    <Property Name="dateCommande" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="COMMANDEAEMPORTER">
+    <Key>
+      <PropertyRef Name="NUMERO_COMMANDE" />
+    </Key>
+    <Property Name="NUMERO_COMMANDE" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" Nullable="false" />
+    <Property Name="POURCENTAGETVA" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="DATEEMPORTER" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="IDTRANSPORT" Type="int" Nullable="false" />
+    <Property Name="ADRESSELIVRAISON" Type="varchar" MaxLength="255" />
+    <Property Name="FRAISLIVRAISON" Type="double" />
+    <Property Name="Archiv" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMMANDESURPLACE">
+    <Key>
+      <PropertyRef Name="NUMERO_COMMANDE" />
+    </Key>
+    <Property Name="NUMERO_COMMANDE" Type="int" Nullable="false" />
+    <Property Name="ID_TABLE" Type="int" Nullable="false" />
+    <Property Name="MATRICULE_SERVEUR" Type="int" Nullable="false" />
+    <Property Name="POURCENTAGETVA" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="Archivsurplace" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CUISINER">
+    <Key>
+      <PropertyRef Name="ID_PRODUIT" />
+      <PropertyRef Name="ID_RESTAURANT" />
+    </Key>
+    <Property Name="ID_PRODUIT" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" Nullable="false" />
+    <Property Name="PRIXHT_PRODUIT" Type="double" />
+    <Property Name="SEUILACTUEL" Type="bigint" />
+    <Property Name="SEUILMAXIMAL" Type="bigint" />
+    <Property Name="SEUILMINIMAL" Type="bigint" />
+    <Property Name="IMAGE_PRODUIT" Type="varchar" MaxLength="1000" />
+    <Property Name="Archiv" Type="bool" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DETAILS">
+    <Key>
+      <PropertyRef Name="NUMERO_COMMANDE" />
+      <PropertyRef Name="ID_RESTAURANT" />
+      <PropertyRef Name="ID_PRODUIT" />
+    </Key>
+    <Property Name="NUMERO_COMMANDE" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" Nullable="false" />
+    <Property Name="ID_PRODUIT" Type="int" Nullable="false" />
+    <Property Name="QTE" Type="int" />
+    <Property Name="PRIXHT_PRODUIT" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DIRIGEANT">
+    <Key>
+      <PropertyRef Name="MATRICULE_DIRIGEANT" />
+    </Key>
+    <Property Name="MATRICULE_DIRIGEANT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOM_DIRIGEANT" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="PRENOM_DIRIGEANT" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="DATENAISS_DIRIGEANT" Type="date" Nullable="false" />
+    <Property Name="MAIL_DIRIGEANT" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="TEL_DIRIGEANT" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="MOTDEPASSE_DIRIGEANT" Type="char" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DIRIGER">
+    <Key>
+      <PropertyRef Name="MATRICULE_DIRIGEANT" />
+      <PropertyRef Name="ID_RESTAURANT" />
+    </Key>
+    <Property Name="MATRICULE_DIRIGEANT" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" Nullable="false" />
+    <Property Name="DATEARRIVEE_DIRIGEANT" Type="date" />
+    <Property Name="DATEDEPART_DIRIGEANT" Type="date" />
+  </EntityType>
+  <EntityType Name="ESTRESPONSABLE">
+    <Key>
+      <PropertyRef Name="MATRICULE_SERVEUR" />
+      <PropertyRef Name="MATRICULE_SERVEUR_1" />
+    </Key>
+    <Property Name="MATRICULE_SERVEUR" Type="int" Nullable="false" />
+    <Property Name="MATRICULE_SERVEUR_1" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="failed_jobs">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uuid" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="connection" Type="text" Nullable="false" />
+    <Property Name="queue" Type="text" Nullable="false" />
+    <Property Name="payload" Type="longtext" Nullable="false" />
+    <Property Name="exception" Type="longtext" Nullable="false" />
+    <Property Name="failed_at" Type="timestamp" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GERER">
+    <Key>
+      <PropertyRef Name="ID_TABLE" />
+      <PropertyRef Name="MATRICULE_SERVEUR" />
+    </Key>
+    <Property Name="ID_TABLE" Type="int" Nullable="false" />
+    <Property Name="MATRICULE_SERVEUR" Type="int" Nullable="false" />
+    <Property Name="DATEHEURESERVICE" Type="datetime" Precision="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HISTORIQUEREAPRO">
+    <Key>
+      <PropertyRef Name="ID_PRODUIT" />
+      <PropertyRef Name="ID_RESTAURANT" />
+      <PropertyRef Name="datereapro" />
+    </Key>
+    <Property Name="ID_PRODUIT" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" Nullable="false" />
+    <Property Name="datereapro" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="quantite" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="migrations">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="migration" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="batch" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.GUEGUEN.password_resets' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="password_resets">
+    <Key>
+      <PropertyRef Name="email" />
+      <PropertyRef Name="token" />
+    </Key>
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="token" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="created_at" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="personal_access_tokens">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="ubigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tokenable_type" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="tokenable_id" Type="ubigint" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="token" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="abilities" Type="text" />
+    <Property Name="last_used_at" Type="timestamp" Precision="0" />
+    <Property Name="expires_at" Type="timestamp" Precision="0" />
+    <Property Name="created_at" Type="timestamp" Precision="0" />
+    <Property Name="updated_at" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="PEUT_AVOIR">
+    <Key>
+      <PropertyRef Name="ID_PRODUIT" />
+      <PropertyRef Name="ID_ALLERGENE" />
+    </Key>
+    <Property Name="ID_PRODUIT" Type="int" Nullable="false" />
+    <Property Name="ID_ALLERGENE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUIT">
+    <Key>
+      <PropertyRef Name="ID_PRODUIT" />
+    </Key>
+    <Property Name="ID_PRODUIT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CATEGORIE" Type="int" Nullable="false" />
+    <Property Name="NOM_PRODUIT" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="DESCRIPTION_PRODUIT" Type="varchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RESTAURANT">
+    <Key>
+      <PropertyRef Name="ID_RESTAURANT" />
+    </Key>
+    <Property Name="ID_RESTAURANT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_TYPERESTAURANT" Type="int" />
+    <Property Name="NOM_RESTAURANT" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="LIEU_RESTAURANT" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="DATEOUVERTURE" Type="time" Precision="0" Nullable="false" />
+    <Property Name="DATEFERMETURE" Type="time" Precision="0" Nullable="false" />
+    <Property Name="IMAGE_RESTAURANT" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="latitude" Type="double" Nullable="false" />
+    <Property Name="longitude" Type="double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SERVEUR">
+    <Key>
+      <PropertyRef Name="MATRICULE_SERVEUR" />
+    </Key>
+    <Property Name="MATRICULE_SERVEUR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" />
+    <Property Name="NOM_SERVEUR" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PRENOM_SERVEUR" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAIL_SERVEUR" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email_verified_at" Type="timestamp" Precision="0" />
+    <Property Name="TEL_SERVEUR" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DATEARRIVEE_SERVEUR" Type="date" Nullable="false" />
+    <Property Name="DATEDEPART_SERVEUR" Type="date" />
+    <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="remember_token" Type="varchar" MaxLength="100" />
+    <Property Name="DATENAISS_SERVEUR" Type="date" />
+    <Property Name="created_at" Type="timestamp" Precision="0" />
+    <Property Name="updated_at" Type="timestamp" Precision="0" />
+  </EntityType>
+  <EntityType Name="TABLECLIENT">
+    <Key>
+      <PropertyRef Name="ID_TABLE" />
+    </Key>
+    <Property Name="ID_TABLE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numero_table" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" />
+    <Property Name="NOM_TABLE" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="NBPLACE_TABLE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TRANSPORT">
+    <Key>
+      <PropertyRef Name="IDTRANSPORT" />
+    </Key>
+    <Property Name="IDTRANSPORT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MOYENTRANSPORT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRANSPORTICONE" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TYPEPAIMENT">
+    <Key>
+      <PropertyRef Name="IDPAIMENT" />
+    </Key>
+    <Property Name="IDPAIMENT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMPAIMENT" Type="varchar" MaxLength="128" />
+    <Property Name="IMAGEPAIMENT" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="TYPERESTAURANT">
+    <Key>
+      <PropertyRef Name="ID_TYPERESTAURANT" />
+    </Key>
+    <Property Name="ID_TYPERESTAURANT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LIBELLETYPERESTAURANT" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.GUEGUEN.ListeCommandeEmportV2' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="ListeCommandeEmportV2">
+    <Key>
+      <PropertyRef Name="ID_CLIENT" />
+      <PropertyRef Name="NOM_CLIENT" />
+    </Key>
+    <Property Name="NUMERO_COMMANDE" Type="int" />
+    <Property Name="IDPAIMENT" Type="int" />
+    <Property Name="ID_CLIENT" Type="int" Nullable="false" />
+    <Property Name="NOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" />
+    <Property Name="POURCENTAGETVA" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="dateCommande" Type="datetime" Precision="0" />
+    <Property Name="Archiv" Type="bool" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.GUEGUEN.ListeCommandeSurPlaceDate' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="ListeCommandeSurPlaceDate">
+    <Key>
+      <PropertyRef Name="ID_CLIENT" />
+      <PropertyRef Name="NOM_CLIENT" />
+      <PropertyRef Name="ID_TABLE" />
+    </Key>
+    <Property Name="NUMERO_COMMANDE" Type="int" />
+    <Property Name="IDPAIMENT" Type="int" />
+    <Property Name="ID_CLIENT" Type="int" Nullable="false" />
+    <Property Name="NOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="NOM_TABLE" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="POURCENTAGETVA" Type="datetime" Precision="0" />
+    <Property Name="dateCommande" Type="int" />
+    <Property Name="ID_TABLE" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="MATRICULE_SERVEUR" Type="int" />
+    <Property Name="Archivsurplace" Type="bool" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.GUEGUEN.v_Facture' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="v_Facture">
+    <Key>
+      <PropertyRef Name="NumCommande" />
+      <PropertyRef Name="IDCLIENTCOMM" />
+      <PropertyRef Name="NOM_CLIENT" />
+      <PropertyRef Name="PRENOM_CLIENT" />
+    </Key>
+    <Property Name="NumCommande" Type="int" Nullable="false" />
+    <Property Name="NumCommSP" Type="int" />
+    <Property Name="NumCommEmpor" Type="int" />
+    <Property Name="dateCommande" Type="datetime" Precision="0" />
+    <Property Name="IDPAIMENT" Type="int" />
+    <Property Name="IDCLIENTCOMM" Type="int" Nullable="false" />
+    <Property Name="NOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="PRENOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="Archivsurplace" Type="bool" />
+    <Property Name="Archiv" Type="bool" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.GUEGUEN.v_stock3' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="v_stock3">
+    <Key>
+      <PropertyRef Name="ID_PRODUIT" />
+      <PropertyRef Name="ID_RESTAURANT" />
+      <PropertyRef Name="NOM_PRODUIT" />
+      <PropertyRef Name="ID_CATEGORIE" />
+      <PropertyRef Name="IMAGE_CATEGORIE" />
+      <PropertyRef Name="NOM_CATEGORIE" />
+      <PropertyRef Name="DESCRIPTION_PRODUIT" />
+      <PropertyRef Name="Archiv" />
+    </Key>
+    <Property Name="ID_PRODUIT" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" Nullable="false" />
+    <Property Name="SEUILACTUEL" Type="bigint" />
+    <Property Name="SEUILMINIMAL" Type="bigint" />
+    <Property Name="SEUILMAXIMAL" Type="bigint" />
+    <Property Name="NOM_PRODUIT" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="PRIXHT_PRODUIT" Type="double" />
+    <Property Name="ID_CATEGORIE" Type="int" Nullable="false" />
+    <Property Name="IMAGE_CATEGORIE" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="NOM_CATEGORIE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DESCRIPTION_PRODUIT" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="Archiv" Type="bool" Nullable="false" />
+  </EntityType>
+  <!--Erreurs détectées durant la génération :
+avertissement 6002: La table/vue 'def.GUEGUEN.Vue_RechercheClientDSRestaurant' n'a pas de clé primaire définie. La clé a été déduite et la définition a été créée en tant que table/vue en lecture seule.-->
+  <EntityType Name="Vue_RechercheClientDSRestaurant">
+    <Key>
+      <PropertyRef Name="NUMERO_COMMANDESP" />
+      <PropertyRef Name="ID_TABLESP" />
+      <PropertyRef Name="ID_CLIENT" />
+      <PropertyRef Name="NOM_CLIENT" />
+      <PropertyRef Name="PRENOM_CLIENT" />
+    </Key>
+    <Property Name="NUMERO_COMMANDESP" Type="int" Nullable="false" />
+    <Property Name="ID_TABLESP" Type="int" Nullable="false" />
+    <Property Name="ID_CLIENT" Type="int" Nullable="false" />
+    <Property Name="ID_RESTAURANT" Type="int" />
+    <Property Name="NOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="PRENOM_CLIENT" Type="char" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="AVIS_ibfk_1">
+    <End Role="RESTAURANT" Type="Self.RESTAURANT" Multiplicity="1" />
+    <End Role="AVIS" Type="Self.AVIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESTAURANT">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Principal>
+      <Dependent Role="AVIS">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AVIS_ibfk_2">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+    <End Role="AVIS" Type="Self.AVIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="ID_CLIENT" />
+      </Principal>
+      <Dependent Role="AVIS">
+        <PropertyRef Name="ID_CLIENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="COMMANDESURPLACE_ibfk_1">
+    <End Role="SERVEUR" Type="Self.SERVEUR" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMMANDESURPLACE" Type="Self.COMMANDESURPLACE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVEUR">
+        <PropertyRef Name="MATRICULE_SERVEUR" />
+      </Principal>
+      <Dependent Role="COMMANDESURPLACE">
+        <PropertyRef Name="MATRICULE_SERVEUR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DETAILS_ibfk_1">
+    <End Role="CUISINER" Type="Self.CUISINER" Multiplicity="1" />
+    <End Role="DETAILS" Type="Self.DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUISINER">
+        <PropertyRef Name="ID_PRODUIT" />
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Principal>
+      <Dependent Role="DETAILS">
+        <PropertyRef Name="ID_PRODUIT" />
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ESTRESPONSABLE_ibfk_1">
+    <End Role="SERVEUR" Type="Self.SERVEUR" Multiplicity="1" />
+    <End Role="ESTRESPONSABLE" Type="Self.ESTRESPONSABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVEUR">
+        <PropertyRef Name="MATRICULE_SERVEUR" />
+      </Principal>
+      <Dependent Role="ESTRESPONSABLE">
+        <PropertyRef Name="MATRICULE_SERVEUR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ESTRESPONSABLE_ibfk_2">
+    <End Role="SERVEUR" Type="Self.SERVEUR" Multiplicity="1" />
+    <End Role="ESTRESPONSABLE" Type="Self.ESTRESPONSABLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVEUR">
+        <PropertyRef Name="MATRICULE_SERVEUR" />
+      </Principal>
+      <Dependent Role="ESTRESPONSABLE">
+        <PropertyRef Name="MATRICULE_SERVEUR_1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSEOIR_CLIENT">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+    <End Role="ASSEOIR" Type="Self.ASSEOIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="ID_CLIENT" />
+      </Principal>
+      <Dependent Role="ASSEOIR">
+        <PropertyRef Name="ID_CLIENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ASSEOIR_TABLECLIENT">
+    <End Role="TABLECLIENT" Type="Self.TABLECLIENT" Multiplicity="1" />
+    <End Role="ASSEOIR" Type="Self.ASSEOIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TABLECLIENT">
+        <PropertyRef Name="ID_TABLE" />
+      </Principal>
+      <Dependent Role="ASSEOIR">
+        <PropertyRef Name="ID_TABLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDE_CLIENT">
+    <End Role="CLIENT" Type="Self.CLIENT" Multiplicity="1" />
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT">
+        <PropertyRef Name="ID_CLIENT" />
+      </Principal>
+      <Dependent Role="COMMANDE">
+        <PropertyRef Name="ID_CLIENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDE_TYPEPAIMENT">
+    <End Role="TYPEPAIMENT" Type="Self.TYPEPAIMENT" Multiplicity="0..1" />
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPEPAIMENT">
+        <PropertyRef Name="IDPAIMENT" />
+      </Principal>
+      <Dependent Role="COMMANDE">
+        <PropertyRef Name="IDPAIMENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDEAEMPORTER_COMMANDE">
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="COMMANDEAEMPORTER" Type="Self.COMMANDEAEMPORTER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="COMMANDE">
+        <PropertyRef Name="NUMERO_COMMANDE" />
+      </Principal>
+      <Dependent Role="COMMANDEAEMPORTER">
+        <PropertyRef Name="NUMERO_COMMANDE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDESURPLACE_COMMANDE">
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="1" />
+    <End Role="COMMANDESURPLACE" Type="Self.COMMANDESURPLACE" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="COMMANDE">
+        <PropertyRef Name="NUMERO_COMMANDE" />
+      </Principal>
+      <Dependent Role="COMMANDESURPLACE">
+        <PropertyRef Name="NUMERO_COMMANDE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMANDESURPLACE_TABLECLIENT">
+    <End Role="TABLECLIENT" Type="Self.TABLECLIENT" Multiplicity="1" />
+    <End Role="COMMANDESURPLACE" Type="Self.COMMANDESURPLACE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TABLECLIENT">
+        <PropertyRef Name="ID_TABLE" />
+      </Principal>
+      <Dependent Role="COMMANDESURPLACE">
+        <PropertyRef Name="ID_TABLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUISINER_PRODUIT">
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="1" />
+    <End Role="CUISINER" Type="Self.CUISINER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUIT">
+        <PropertyRef Name="ID_PRODUIT" />
+      </Principal>
+      <Dependent Role="CUISINER">
+        <PropertyRef Name="ID_PRODUIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CUISINER_RESTAURANT">
+    <End Role="RESTAURANT" Type="Self.RESTAURANT" Multiplicity="1" />
+    <End Role="CUISINER" Type="Self.CUISINER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESTAURANT">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Principal>
+      <Dependent Role="CUISINER">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIRIGER_DIRIGEANT">
+    <End Role="DIRIGEANT" Type="Self.DIRIGEANT" Multiplicity="1" />
+    <End Role="DIRIGER" Type="Self.DIRIGER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DIRIGEANT">
+        <PropertyRef Name="MATRICULE_DIRIGEANT" />
+      </Principal>
+      <Dependent Role="DIRIGER">
+        <PropertyRef Name="MATRICULE_DIRIGEANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DIRIGER_RESTAURANT">
+    <End Role="RESTAURANT" Type="Self.RESTAURANT" Multiplicity="1" />
+    <End Role="DIRIGER" Type="Self.DIRIGER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESTAURANT">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Principal>
+      <Dependent Role="DIRIGER">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GERER_TABLECLIENT">
+    <End Role="TABLECLIENT" Type="Self.TABLECLIENT" Multiplicity="1" />
+    <End Role="GERER" Type="Self.GERER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TABLECLIENT">
+        <PropertyRef Name="ID_TABLE" />
+      </Principal>
+      <Dependent Role="GERER">
+        <PropertyRef Name="ID_TABLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEUT_AVOIR_ALLERGENE">
+    <End Role="ALLERGENE" Type="Self.ALLERGENE" Multiplicity="1" />
+    <End Role="PEUT_AVOIR" Type="Self.PEUT_AVOIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ALLERGENE">
+        <PropertyRef Name="ID_ALLERGENE" />
+      </Principal>
+      <Dependent Role="PEUT_AVOIR">
+        <PropertyRef Name="ID_ALLERGENE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEUT_AVOIR_PRODUIT">
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="1" />
+    <End Role="PEUT_AVOIR" Type="Self.PEUT_AVOIR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUIT">
+        <PropertyRef Name="ID_PRODUIT" />
+      </Principal>
+      <Dependent Role="PEUT_AVOIR">
+        <PropertyRef Name="ID_PRODUIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POUVOIR_COMMANDE">
+    <End Role="COMMANDE" Type="Self.COMMANDE" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DETAILS" Type="Self.DETAILS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMMANDE">
+        <PropertyRef Name="NUMERO_COMMANDE" />
+      </Principal>
+      <Dependent Role="DETAILS">
+        <PropertyRef Name="NUMERO_COMMANDE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUIT_CATEGORIE">
+    <End Role="CATEGORIE" Type="Self.CATEGORIE" Multiplicity="1" />
+    <End Role="PRODUIT" Type="Self.PRODUIT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORIE">
+        <PropertyRef Name="ID_CATEGORIE" />
+      </Principal>
+      <Dependent Role="PRODUIT">
+        <PropertyRef Name="ID_CATEGORIE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESTAURANT_TYPERESTAURANT">
+    <End Role="TYPERESTAURANT" Type="Self.TYPERESTAURANT" Multiplicity="0..1" />
+    <End Role="RESTAURANT" Type="Self.RESTAURANT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TYPERESTAURANT">
+        <PropertyRef Name="ID_TYPERESTAURANT" />
+      </Principal>
+      <Dependent Role="RESTAURANT">
+        <PropertyRef Name="ID_TYPERESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESTO">
+    <End Role="RESTAURANT" Type="Self.RESTAURANT" Multiplicity="1" />
+    <End Role="COMMANDEAEMPORTER" Type="Self.COMMANDEAEMPORTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESTAURANT">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Principal>
+      <Dependent Role="COMMANDEAEMPORTER">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SERVEUR_RESTAURANT">
+    <End Role="RESTAURANT" Type="Self.RESTAURANT" Multiplicity="0..1" />
+    <End Role="SERVEUR" Type="Self.SERVEUR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESTAURANT">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Principal>
+      <Dependent Role="SERVEUR">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TABLECLIENT_RESTAURANT">
+    <End Role="RESTAURANT" Type="Self.RESTAURANT" Multiplicity="0..1" />
+    <End Role="TABLECLIENT" Type="Self.TABLECLIENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESTAURANT">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Principal>
+      <Dependent Role="TABLECLIENT">
+        <PropertyRef Name="ID_RESTAURANT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TRANSPORT">
+    <End Role="TRANSPORT" Type="Self.TRANSPORT" Multiplicity="1" />
+    <End Role="COMMANDEAEMPORTER" Type="Self.COMMANDEAEMPORTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORT">
+        <PropertyRef Name="IDTRANSPORT" />
+      </Principal>
+      <Dependent Role="COMMANDEAEMPORTER">
+        <PropertyRef Name="IDTRANSPORT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GERER_ibfk_1">
+    <End Role="SERVEUR" Type="Self.SERVEUR" Multiplicity="1" />
+    <End Role="GERER" Type="Self.GERER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SERVEUR">
+        <PropertyRef Name="MATRICULE_SERVEUR" />
+      </Principal>
+      <Dependent Role="GERER">
+        <PropertyRef Name="MATRICULE_SERVEUR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Erreurs détectées durant la génération :
+avertissement 6035: La relation 'HISTORIQUEREAPRO_ibfk_1' a des colonnes qui ne font pas partie de la clé de la table du côté primaire de la relation. La relation a été exclue.
+        <Association Name="HISTORIQUEREAPRO_ibfk_1" />-->
+  <EntityContainer Name="GUEGUENModelStoreContainer">
+    <EntitySet Name="ALLERGENE" EntityType="Self.ALLERGENE" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="ASSEOIR" EntityType="Self.ASSEOIR" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="AVIS" EntityType="Self.AVIS" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="CATEGORIE" EntityType="Self.CATEGORIE" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="CLIENT" EntityType="Self.CLIENT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="COMMANDE" EntityType="Self.COMMANDE" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="COMMANDEAEMPORTER" EntityType="Self.COMMANDEAEMPORTER" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="COMMANDESURPLACE" EntityType="Self.COMMANDESURPLACE" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="CUISINER" EntityType="Self.CUISINER" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="DETAILS" EntityType="Self.DETAILS" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="DIRIGEANT" EntityType="Self.DIRIGEANT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="DIRIGER" EntityType="Self.DIRIGER" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="ESTRESPONSABLE" EntityType="Self.ESTRESPONSABLE" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="failed_jobs" EntityType="Self.failed_jobs" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="GERER" EntityType="Self.GERER" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="HISTORIQUEREAPRO" EntityType="Self.HISTORIQUEREAPRO" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="migrations" EntityType="Self.migrations" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="personal_access_tokens" EntityType="Self.personal_access_tokens" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="PEUT_AVOIR" EntityType="Self.PEUT_AVOIR" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="PRODUIT" EntityType="Self.PRODUIT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="RESTAURANT" EntityType="Self.RESTAURANT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="SERVEUR" EntityType="Self.SERVEUR" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="TABLECLIENT" EntityType="Self.TABLECLIENT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="TRANSPORT" EntityType="Self.TRANSPORT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="TYPEPAIMENT" EntityType="Self.TYPEPAIMENT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="TYPERESTAURANT" EntityType="Self.TYPERESTAURANT" Schema="GUEGUEN" store:Type="Tables" />
+    <EntitySet Name="password_resets" EntityType="Self.password_resets" store:Type="Tables" store:Schema="GUEGUEN">
+      <DefiningQuery>SELECT
+`password_resets`.`email`, 
+`password_resets`.`token`, 
+`password_resets`.`created_at`
+FROM `password_resets` AS `password_resets`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ListeCommandeEmportV2" EntityType="Self.ListeCommandeEmportV2" store:Type="Views" store:Schema="GUEGUEN">
+      <DefiningQuery>SELECT
+`ListeCommandeEmportV2`.`NUMERO_COMMANDE`, 
+`ListeCommandeEmportV2`.`IDPAIMENT`, 
+`ListeCommandeEmportV2`.`ID_CLIENT`, 
+`ListeCommandeEmportV2`.`NOM_CLIENT`, 
+`ListeCommandeEmportV2`.`ID_RESTAURANT`, 
+`ListeCommandeEmportV2`.`POURCENTAGETVA`, 
+`ListeCommandeEmportV2`.`dateCommande`, 
+`ListeCommandeEmportV2`.`Archiv`
+FROM `ListeCommandeEmportV2` AS `ListeCommandeEmportV2`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ListeCommandeSurPlaceDate" EntityType="Self.ListeCommandeSurPlaceDate" store:Type="Views" store:Schema="GUEGUEN">
+      <DefiningQuery>SELECT
+`ListeCommandeSurPlaceDate`.`NUMERO_COMMANDE`, 
+`ListeCommandeSurPlaceDate`.`IDPAIMENT`, 
+`ListeCommandeSurPlaceDate`.`ID_CLIENT`, 
+`ListeCommandeSurPlaceDate`.`NOM_CLIENT`, 
+`ListeCommandeSurPlaceDate`.`NOM_TABLE`, 
+`ListeCommandeSurPlaceDate`.`POURCENTAGETVA`, 
+`ListeCommandeSurPlaceDate`.`dateCommande`, 
+`ListeCommandeSurPlaceDate`.`ID_TABLE`, 
+`ListeCommandeSurPlaceDate`.`MATRICULE_SERVEUR`, 
+`ListeCommandeSurPlaceDate`.`Archivsurplace`
+FROM `ListeCommandeSurPlaceDate` AS `ListeCommandeSurPlaceDate`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_Facture" EntityType="Self.v_Facture" store:Type="Views" store:Schema="GUEGUEN">
+      <DefiningQuery>SELECT
+`v_Facture`.`NumCommande`, 
+`v_Facture`.`NumCommSP`, 
+`v_Facture`.`NumCommEmpor`, 
+`v_Facture`.`dateCommande`, 
+`v_Facture`.`IDPAIMENT`, 
+`v_Facture`.`IDCLIENTCOMM`, 
+`v_Facture`.`NOM_CLIENT`, 
+`v_Facture`.`PRENOM_CLIENT`, 
+`v_Facture`.`Archivsurplace`, 
+`v_Facture`.`Archiv`
+FROM `v_Facture` AS `v_Facture`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="v_stock3" EntityType="Self.v_stock3" store:Type="Views" store:Schema="GUEGUEN">
+      <DefiningQuery>SELECT
+`v_stock3`.`ID_PRODUIT`, 
+`v_stock3`.`ID_RESTAURANT`, 
+`v_stock3`.`SEUILACTUEL`, 
+`v_stock3`.`SEUILMINIMAL`, 
+`v_stock3`.`SEUILMAXIMAL`, 
+`v_stock3`.`NOM_PRODUIT`, 
+`v_stock3`.`PRIXHT_PRODUIT`, 
+`v_stock3`.`ID_CATEGORIE`, 
+`v_stock3`.`IMAGE_CATEGORIE`, 
+`v_stock3`.`NOM_CATEGORIE`, 
+`v_stock3`.`DESCRIPTION_PRODUIT`, 
+`v_stock3`.`Archiv`
+FROM `v_stock3` AS `v_stock3`</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Vue_RechercheClientDSRestaurant" EntityType="Self.Vue_RechercheClientDSRestaurant" store:Type="Views" store:Schema="GUEGUEN">
+      <DefiningQuery>SELECT
+`Vue_RechercheClientDSRestaurant`.`NUMERO_COMMANDESP`, 
+`Vue_RechercheClientDSRestaurant`.`ID_TABLESP`, 
+`Vue_RechercheClientDSRestaurant`.`ID_CLIENT`, 
+`Vue_RechercheClientDSRestaurant`.`ID_RESTAURANT`, 
+`Vue_RechercheClientDSRestaurant`.`NOM_CLIENT`, 
+`Vue_RechercheClientDSRestaurant`.`PRENOM_CLIENT`
+FROM `Vue_RechercheClientDSRestaurant` AS `Vue_RechercheClientDSRestaurant`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="AVIS_ibfk_1" Association="Self.AVIS_ibfk_1">
+      <End Role="RESTAURANT" EntitySet="RESTAURANT" />
+      <End Role="AVIS" EntitySet="AVIS" />
+    </AssociationSet>
+    <AssociationSet Name="AVIS_ibfk_2" Association="Self.AVIS_ibfk_2">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="AVIS" EntitySet="AVIS" />
+    </AssociationSet>
+    <AssociationSet Name="COMMANDESURPLACE_ibfk_1" Association="Self.COMMANDESURPLACE_ibfk_1">
+      <End Role="SERVEUR" EntitySet="SERVEUR" />
+      <End Role="COMMANDESURPLACE" EntitySet="COMMANDESURPLACE" />
+    </AssociationSet>
+    <AssociationSet Name="DETAILS_ibfk_1" Association="Self.DETAILS_ibfk_1">
+      <End Role="CUISINER" EntitySet="CUISINER" />
+      <End Role="DETAILS" EntitySet="DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="ESTRESPONSABLE_ibfk_1" Association="Self.ESTRESPONSABLE_ibfk_1">
+      <End Role="SERVEUR" EntitySet="SERVEUR" />
+      <End Role="ESTRESPONSABLE" EntitySet="ESTRESPONSABLE" />
+    </AssociationSet>
+    <AssociationSet Name="ESTRESPONSABLE_ibfk_2" Association="Self.ESTRESPONSABLE_ibfk_2">
+      <End Role="SERVEUR" EntitySet="SERVEUR" />
+      <End Role="ESTRESPONSABLE" EntitySet="ESTRESPONSABLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSEOIR_CLIENT" Association="Self.FK_ASSEOIR_CLIENT">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="ASSEOIR" EntitySet="ASSEOIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ASSEOIR_TABLECLIENT" Association="Self.FK_ASSEOIR_TABLECLIENT">
+      <End Role="TABLECLIENT" EntitySet="TABLECLIENT" />
+      <End Role="ASSEOIR" EntitySet="ASSEOIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDE_CLIENT" Association="Self.FK_COMMANDE_CLIENT">
+      <End Role="CLIENT" EntitySet="CLIENT" />
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDE_TYPEPAIMENT" Association="Self.FK_COMMANDE_TYPEPAIMENT">
+      <End Role="TYPEPAIMENT" EntitySet="TYPEPAIMENT" />
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDEAEMPORTER_COMMANDE" Association="Self.FK_COMMANDEAEMPORTER_COMMANDE">
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+      <End Role="COMMANDEAEMPORTER" EntitySet="COMMANDEAEMPORTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDESURPLACE_COMMANDE" Association="Self.FK_COMMANDESURPLACE_COMMANDE">
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+      <End Role="COMMANDESURPLACE" EntitySet="COMMANDESURPLACE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMANDESURPLACE_TABLECLIENT" Association="Self.FK_COMMANDESURPLACE_TABLECLIENT">
+      <End Role="TABLECLIENT" EntitySet="TABLECLIENT" />
+      <End Role="COMMANDESURPLACE" EntitySet="COMMANDESURPLACE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUISINER_PRODUIT" Association="Self.FK_CUISINER_PRODUIT">
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+      <End Role="CUISINER" EntitySet="CUISINER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CUISINER_RESTAURANT" Association="Self.FK_CUISINER_RESTAURANT">
+      <End Role="RESTAURANT" EntitySet="RESTAURANT" />
+      <End Role="CUISINER" EntitySet="CUISINER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIRIGER_DIRIGEANT" Association="Self.FK_DIRIGER_DIRIGEANT">
+      <End Role="DIRIGEANT" EntitySet="DIRIGEANT" />
+      <End Role="DIRIGER" EntitySet="DIRIGER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DIRIGER_RESTAURANT" Association="Self.FK_DIRIGER_RESTAURANT">
+      <End Role="RESTAURANT" EntitySet="RESTAURANT" />
+      <End Role="DIRIGER" EntitySet="DIRIGER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GERER_TABLECLIENT" Association="Self.FK_GERER_TABLECLIENT">
+      <End Role="TABLECLIENT" EntitySet="TABLECLIENT" />
+      <End Role="GERER" EntitySet="GERER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEUT_AVOIR_ALLERGENE" Association="Self.FK_PEUT_AVOIR_ALLERGENE">
+      <End Role="ALLERGENE" EntitySet="ALLERGENE" />
+      <End Role="PEUT_AVOIR" EntitySet="PEUT_AVOIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEUT_AVOIR_PRODUIT" Association="Self.FK_PEUT_AVOIR_PRODUIT">
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+      <End Role="PEUT_AVOIR" EntitySet="PEUT_AVOIR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POUVOIR_COMMANDE" Association="Self.FK_POUVOIR_COMMANDE">
+      <End Role="COMMANDE" EntitySet="COMMANDE" />
+      <End Role="DETAILS" EntitySet="DETAILS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUIT_CATEGORIE" Association="Self.FK_PRODUIT_CATEGORIE">
+      <End Role="CATEGORIE" EntitySet="CATEGORIE" />
+      <End Role="PRODUIT" EntitySet="PRODUIT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESTAURANT_TYPERESTAURANT" Association="Self.FK_RESTAURANT_TYPERESTAURANT">
+      <End Role="TYPERESTAURANT" EntitySet="TYPERESTAURANT" />
+      <End Role="RESTAURANT" EntitySet="RESTAURANT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESTO" Association="Self.FK_RESTO">
+      <End Role="RESTAURANT" EntitySet="RESTAURANT" />
+      <End Role="COMMANDEAEMPORTER" EntitySet="COMMANDEAEMPORTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SERVEUR_RESTAURANT" Association="Self.FK_SERVEUR_RESTAURANT">
+      <End Role="RESTAURANT" EntitySet="RESTAURANT" />
+      <End Role="SERVEUR" EntitySet="SERVEUR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TABLECLIENT_RESTAURANT" Association="Self.FK_TABLECLIENT_RESTAURANT">
+      <End Role="RESTAURANT" EntitySet="RESTAURANT" />
+      <End Role="TABLECLIENT" EntitySet="TABLECLIENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TRANSPORT" Association="Self.FK_TRANSPORT">
+      <End Role="TRANSPORT" EntitySet="TRANSPORT" />
+      <End Role="COMMANDEAEMPORTER" EntitySet="COMMANDEAEMPORTER" />
+    </AssociationSet>
+    <AssociationSet Name="GERER_ibfk_1" Association="Self.GERER_ibfk_1">
+      <End Role="SERVEUR" EntitySet="SERVEUR" />
+      <End Role="GERER" EntitySet="GERER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

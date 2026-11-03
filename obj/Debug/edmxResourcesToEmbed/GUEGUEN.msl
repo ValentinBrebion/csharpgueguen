@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GUEGUENModelStoreContainer" CdmEntityContainer="GUEGUENAppEntities">
+    <EntitySetMapping Name="ALLERGENE">
+      <EntityTypeMapping TypeName="GUEGUENModel.ALLERGENE">
+        <MappingFragment StoreEntitySet="ALLERGENE">
+          <ScalarProperty Name="ID_ALLERGENE" ColumnName="ID_ALLERGENE" />
+          <ScalarProperty Name="NOM_ALLERGENE" ColumnName="NOM_ALLERGENE" />
+          <ScalarProperty Name="DESCRIPTION_ALLERGENE" ColumnName="DESCRIPTION_ALLERGENE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ASSEOIR">
+      <EntityTypeMapping TypeName="GUEGUENModel.ASSEOIR">
+        <MappingFragment StoreEntitySet="ASSEOIR">
+          <ScalarProperty Name="ID_TABLE" ColumnName="ID_TABLE" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="DATECLIENTASSEOIR" ColumnName="DATECLIENTASSEOIR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENT">
+      <EntityTypeMapping TypeName="GUEGUENModel.CLIENT">
+        <MappingFragment StoreEntitySet="CLIENT">
+          <ScalarProperty Name="url_img_profil" ColumnName="url_img_profil" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="NOM_CLIENT" ColumnName="NOM_CLIENT" />
+          <ScalarProperty Name="PRENOM_CLIENT" ColumnName="PRENOM_CLIENT" />
+          <ScalarProperty Name="MAIL_CLIENT" ColumnName="MAIL_CLIENT" />
+          <ScalarProperty Name="email_verified_at" ColumnName="email_verified_at" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="remember_token" ColumnName="remember_token" />
+          <ScalarProperty Name="DATENAISS_CLIENT" ColumnName="DATENAISS_CLIENT" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMANDE">
+      <EntityTypeMapping TypeName="GUEGUENModel.COMMANDE">
+        <MappingFragment StoreEntitySet="COMMANDE">
+          <ScalarProperty Name="dateCommande" ColumnName="dateCommande" />
+          <ScalarProperty Name="NUMERO_COMMANDE" ColumnName="NUMERO_COMMANDE" />
+          <ScalarProperty Name="IDPAIMENT" ColumnName="IDPAIMENT" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMANDEAEMPORTER">
+      <EntityTypeMapping TypeName="GUEGUENModel.COMMANDEAEMPORTER">
+        <MappingFragment StoreEntitySet="COMMANDEAEMPORTER">
+          <ScalarProperty Name="FRAISLIVRAISON" ColumnName="FRAISLIVRAISON" />
+          <ScalarProperty Name="ADRESSELIVRAISON" ColumnName="ADRESSELIVRAISON" />
+          <ScalarProperty Name="IDTRANSPORT" ColumnName="IDTRANSPORT" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="Archiv" ColumnName="Archiv" />
+          <ScalarProperty Name="NUMERO_COMMANDE" ColumnName="NUMERO_COMMANDE" />
+          <ScalarProperty Name="POURCENTAGETVA" ColumnName="POURCENTAGETVA" />
+          <ScalarProperty Name="DATEEMPORTER" ColumnName="DATEEMPORTER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMMANDESURPLACE">
+      <EntityTypeMapping TypeName="GUEGUENModel.COMMANDESURPLACE">
+        <MappingFragment StoreEntitySet="COMMANDESURPLACE">
+          <ScalarProperty Name="Archivsurplace" ColumnName="Archivsurplace" />
+          <ScalarProperty Name="NUMERO_COMMANDE" ColumnName="NUMERO_COMMANDE" />
+          <ScalarProperty Name="ID_TABLE" ColumnName="ID_TABLE" />
+          <ScalarProperty Name="MATRICULE_SERVEUR" ColumnName="MATRICULE_SERVEUR" />
+          <ScalarProperty Name="POURCENTAGETVA" ColumnName="POURCENTAGETVA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETAILS">
+      <EntityTypeMapping TypeName="GUEGUENModel.DETAILS">
+        <MappingFragment StoreEntitySet="DETAILS">
+          <ScalarProperty Name="PRIXHT_PRODUIT" ColumnName="PRIXHT_PRODUIT" />
+          <ScalarProperty Name="NUMERO_COMMANDE" ColumnName="NUMERO_COMMANDE" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="ID_PRODUIT" ColumnName="ID_PRODUIT" />
+          <ScalarProperty Name="QTE" ColumnName="QTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIRIGEANT">
+      <EntityTypeMapping TypeName="GUEGUENModel.DIRIGEANT">
+        <MappingFragment StoreEntitySet="DIRIGEANT">
+          <ScalarProperty Name="MATRICULE_DIRIGEANT" ColumnName="MATRICULE_DIRIGEANT" />
+          <ScalarProperty Name="NOM_DIRIGEANT" ColumnName="NOM_DIRIGEANT" />
+          <ScalarProperty Name="PRENOM_DIRIGEANT" ColumnName="PRENOM_DIRIGEANT" />
+          <ScalarProperty Name="DATENAISS_DIRIGEANT" ColumnName="DATENAISS_DIRIGEANT" />
+          <ScalarProperty Name="MAIL_DIRIGEANT" ColumnName="MAIL_DIRIGEANT" />
+          <ScalarProperty Name="TEL_DIRIGEANT" ColumnName="TEL_DIRIGEANT" />
+          <ScalarProperty Name="MOTDEPASSE_DIRIGEANT" ColumnName="MOTDEPASSE_DIRIGEANT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DIRIGER">
+      <EntityTypeMapping TypeName="GUEGUENModel.DIRIGER">
+        <MappingFragment StoreEntitySet="DIRIGER">
+          <ScalarProperty Name="MATRICULE_DIRIGEANT" ColumnName="MATRICULE_DIRIGEANT" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="DATEARRIVEE_DIRIGEANT" ColumnName="DATEARRIVEE_DIRIGEANT" />
+          <ScalarProperty Name="DATEDEPART_DIRIGEANT" ColumnName="DATEDEPART_DIRIGEANT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="failed_jobs">
+      <EntityTypeMapping TypeName="GUEGUENModel.failed_jobs">
+        <MappingFragment StoreEntitySet="failed_jobs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="uuid" ColumnName="uuid" />
+          <ScalarProperty Name="connection" ColumnName="connection" />
+          <ScalarProperty Name="queue" ColumnName="queue" />
+          <ScalarProperty Name="payload" ColumnName="payload" />
+          <ScalarProperty Name="exception" ColumnName="exception" />
+          <ScalarProperty Name="failed_at" ColumnName="failed_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GERER">
+      <EntityTypeMapping TypeName="GUEGUENModel.GERER">
+        <MappingFragment StoreEntitySet="GERER">
+          <ScalarProperty Name="ID_TABLE" ColumnName="ID_TABLE" />
+          <ScalarProperty Name="MATRICULE_SERVEUR" ColumnName="MATRICULE_SERVEUR" />
+          <ScalarProperty Name="DATEHEURESERVICE" ColumnName="DATEHEURESERVICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="migrations">
+      <EntityTypeMapping TypeName="GUEGUENModel.migrations">
+        <MappingFragment StoreEntitySet="migrations">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="migration" ColumnName="migration" />
+          <ScalarProperty Name="batch" ColumnName="batch" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="personal_access_tokens">
+      <EntityTypeMapping TypeName="GUEGUENModel.personal_access_tokens">
+        <MappingFragment StoreEntitySet="personal_access_tokens">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tokenable_type" ColumnName="tokenable_type" />
+          <ScalarProperty Name="tokenable_id" ColumnName="tokenable_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="abilities" ColumnName="abilities" />
+          <ScalarProperty Name="last_used_at" ColumnName="last_used_at" />
+          <ScalarProperty Name="expires_at" ColumnName="expires_at" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUIT">
+      <EntityTypeMapping TypeName="GUEGUENModel.PRODUIT">
+        <MappingFragment StoreEntitySet="PRODUIT">
+          <ScalarProperty Name="ID_PRODUIT" ColumnName="ID_PRODUIT" />
+          <ScalarProperty Name="ID_CATEGORIE" ColumnName="ID_CATEGORIE" />
+          <ScalarProperty Name="NOM_PRODUIT" ColumnName="NOM_PRODUIT" />
+          <ScalarProperty Name="DESCRIPTION_PRODUIT" ColumnName="DESCRIPTION_PRODUIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESTAURANT">
+      <EntityTypeMapping TypeName="GUEGUENModel.RESTAURANT">
+        <MappingFragment StoreEntitySet="RESTAURANT">
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="LIEU_RESTAURANT" ColumnName="LIEU_RESTAURANT" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="ID_TYPERESTAURANT" ColumnName="ID_TYPERESTAURANT" />
+          <ScalarProperty Name="NOM_RESTAURANT" ColumnName="NOM_RESTAURANT" />
+          <ScalarProperty Name="DATEOUVERTURE" ColumnName="DATEOUVERTURE" />
+          <ScalarProperty Name="DATEFERMETURE" ColumnName="DATEFERMETURE" />
+          <ScalarProperty Name="IMAGE_RESTAURANT" ColumnName="IMAGE_RESTAURANT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SERVEUR">
+      <EntityTypeMapping TypeName="GUEGUENModel.SERVEUR">
+        <MappingFragment StoreEntitySet="SERVEUR">
+          <ScalarProperty Name="MATRICULE_SERVEUR" ColumnName="MATRICULE_SERVEUR" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="NOM_SERVEUR" ColumnName="NOM_SERVEUR" />
+          <ScalarProperty Name="PRENOM_SERVEUR" ColumnName="PRENOM_SERVEUR" />
+          <ScalarProperty Name="MAIL_SERVEUR" ColumnName="MAIL_SERVEUR" />
+          <ScalarProperty Name="email_verified_at" ColumnName="email_verified_at" />
+          <ScalarProperty Name="TEL_SERVEUR" ColumnName="TEL_SERVEUR" />
+          <ScalarProperty Name="DATEARRIVEE_SERVEUR" ColumnName="DATEARRIVEE_SERVEUR" />
+          <ScalarProperty Name="DATEDEPART_SERVEUR" ColumnName="DATEDEPART_SERVEUR" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="remember_token" ColumnName="remember_token" />
+          <ScalarProperty Name="DATENAISS_SERVEUR" ColumnName="DATENAISS_SERVEUR" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="updated_at" ColumnName="updated_at" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TABLECLIENT">
+      <EntityTypeMapping TypeName="GUEGUENModel.TABLECLIENT">
+        <MappingFragment StoreEntitySet="TABLECLIENT">
+          <ScalarProperty Name="numero_table" ColumnName="numero_table" />
+          <ScalarProperty Name="ID_TABLE" ColumnName="ID_TABLE" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="NOM_TABLE" ColumnName="NOM_TABLE" />
+          <ScalarProperty Name="NBPLACE_TABLE" ColumnName="NBPLACE_TABLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TYPEPAIMENT">
+      <EntityTypeMapping TypeName="GUEGUENModel.TYPEPAIMENT">
+        <MappingFragment StoreEntitySet="TYPEPAIMENT">
+          <ScalarProperty Name="IDPAIMENT" ColumnName="IDPAIMENT" />
+          <ScalarProperty Name="NOMPAIMENT" ColumnName="NOMPAIMENT" />
+          <ScalarProperty Name="IMAGEPAIMENT" ColumnName="IMAGEPAIMENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TYPERESTAURANT">
+      <EntityTypeMapping TypeName="GUEGUENModel.TYPERESTAURANT">
+        <MappingFragment StoreEntitySet="TYPERESTAURANT">
+          <ScalarProperty Name="ID_TYPERESTAURANT" ColumnName="ID_TYPERESTAURANT" />
+          <ScalarProperty Name="LIBELLETYPERESTAURANT" ColumnName="LIBELLETYPERESTAURANT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ESTRESPONSABLE" TypeName="GUEGUENModel.ESTRESPONSABLE" StoreEntitySet="ESTRESPONSABLE">
+      <EndProperty Name="SERVEUR">
+        <ScalarProperty Name="MATRICULE_SERVEUR" ColumnName="MATRICULE_SERVEUR" />
+      </EndProperty>
+      <EndProperty Name="SERVEUR1">
+        <ScalarProperty Name="MATRICULE_SERVEUR" ColumnName="MATRICULE_SERVEUR_1" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PEUT_AVOIR" TypeName="GUEGUENModel.PEUT_AVOIR" StoreEntitySet="PEUT_AVOIR">
+      <EndProperty Name="ALLERGENE">
+        <ScalarProperty Name="ID_ALLERGENE" ColumnName="ID_ALLERGENE" />
+      </EndProperty>
+      <EndProperty Name="PRODUIT">
+        <ScalarProperty Name="ID_PRODUIT" ColumnName="ID_PRODUIT" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="CATEGORIE">
+      <EntityTypeMapping TypeName="GUEGUENModel.CATEGORIE">
+        <MappingFragment StoreEntitySet="CATEGORIE">
+          <ScalarProperty Name="IMAGE_CATEGORIE" ColumnName="IMAGE_CATEGORIE" />
+          <ScalarProperty Name="NOM_CATEGORIE" ColumnName="NOM_CATEGORIE" />
+          <ScalarProperty Name="ID_CATEGORIE" ColumnName="ID_CATEGORIE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUISINER">
+      <EntityTypeMapping TypeName="GUEGUENModel.CUISINER">
+        <MappingFragment StoreEntitySet="CUISINER">
+          <ScalarProperty Name="Archiv" ColumnName="Archiv" />
+          <ScalarProperty Name="IMAGE_PRODUIT" ColumnName="IMAGE_PRODUIT" />
+          <ScalarProperty Name="SEUILMINIMAL" ColumnName="SEUILMINIMAL" />
+          <ScalarProperty Name="SEUILMAXIMAL" ColumnName="SEUILMAXIMAL" />
+          <ScalarProperty Name="SEUILACTUEL" ColumnName="SEUILACTUEL" />
+          <ScalarProperty Name="PRIXHT_PRODUIT" ColumnName="PRIXHT_PRODUIT" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="ID_PRODUIT" ColumnName="ID_PRODUIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSPORT">
+      <EntityTypeMapping TypeName="GUEGUENModel.TRANSPORT">
+        <MappingFragment StoreEntitySet="TRANSPORT">
+          <ScalarProperty Name="TRANSPORTICONE" ColumnName="TRANSPORTICONE" />
+          <ScalarProperty Name="MOYENTRANSPORT" ColumnName="MOYENTRANSPORT" />
+          <ScalarProperty Name="IDTRANSPORT" ColumnName="IDTRANSPORT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AVIS">
+      <EntityTypeMapping TypeName="GUEGUENModel.AVIS">
+        <MappingFragment StoreEntitySet="AVIS">
+          <ScalarProperty Name="dateavis" ColumnName="dateavis" />
+          <ScalarProperty Name="COMMENTAIRE_CLIENT" ColumnName="COMMENTAIRE_CLIENT" />
+          <ScalarProperty Name="NOTE_RESTO" ColumnName="NOTE_RESTO" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HISTORIQUEREAPRO">
+      <EntityTypeMapping TypeName="GUEGUENModel.HISTORIQUEREAPRO">
+        <MappingFragment StoreEntitySet="HISTORIQUEREAPRO">
+          <ScalarProperty Name="quantite" ColumnName="quantite" />
+          <ScalarProperty Name="datereapro" ColumnName="datereapro" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="ID_PRODUIT" ColumnName="ID_PRODUIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="password_resets">
+      <EntityTypeMapping TypeName="GUEGUENModel.password_resets">
+        <MappingFragment StoreEntitySet="password_resets">
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="token" ColumnName="token" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_stock3">
+      <EntityTypeMapping TypeName="GUEGUENModel.v_stock3">
+        <MappingFragment StoreEntitySet="v_stock3">
+          <ScalarProperty Name="Archiv" ColumnName="Archiv" />
+          <ScalarProperty Name="DESCRIPTION_PRODUIT" ColumnName="DESCRIPTION_PRODUIT" />
+          <ScalarProperty Name="NOM_CATEGORIE" ColumnName="NOM_CATEGORIE" />
+          <ScalarProperty Name="IMAGE_CATEGORIE" ColumnName="IMAGE_CATEGORIE" />
+          <ScalarProperty Name="ID_CATEGORIE" ColumnName="ID_CATEGORIE" />
+          <ScalarProperty Name="PRIXHT_PRODUIT" ColumnName="PRIXHT_PRODUIT" />
+          <ScalarProperty Name="NOM_PRODUIT" ColumnName="NOM_PRODUIT" />
+          <ScalarProperty Name="SEUILMAXIMAL" ColumnName="SEUILMAXIMAL" />
+          <ScalarProperty Name="SEUILMINIMAL" ColumnName="SEUILMINIMAL" />
+          <ScalarProperty Name="SEUILACTUEL" ColumnName="SEUILACTUEL" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="ID_PRODUIT" ColumnName="ID_PRODUIT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vue_RechercheClientDSRestaurant">
+      <EntityTypeMapping TypeName="GUEGUENModel.Vue_RechercheClientDSRestaurant">
+        <MappingFragment StoreEntitySet="Vue_RechercheClientDSRestaurant">
+          <ScalarProperty Name="PRENOM_CLIENT" ColumnName="PRENOM_CLIENT" />
+          <ScalarProperty Name="NOM_CLIENT" ColumnName="NOM_CLIENT" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="ID_TABLESP" ColumnName="ID_TABLESP" />
+          <ScalarProperty Name="NUMERO_COMMANDESP" ColumnName="NUMERO_COMMANDESP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListeCommandeSurPlaceDate">
+      <EntityTypeMapping TypeName="GUEGUENModel.ListeCommandeSurPlaceDate">
+        <MappingFragment StoreEntitySet="ListeCommandeSurPlaceDate">
+          <ScalarProperty Name="Archivsurplace" ColumnName="Archivsurplace" />
+          <ScalarProperty Name="MATRICULE_SERVEUR" ColumnName="MATRICULE_SERVEUR" />
+          <ScalarProperty Name="ID_TABLE" ColumnName="ID_TABLE" />
+          <ScalarProperty Name="dateCommande" ColumnName="dateCommande" />
+          <ScalarProperty Name="POURCENTAGETVA" ColumnName="POURCENTAGETVA" />
+          <ScalarProperty Name="NOM_TABLE" ColumnName="NOM_TABLE" />
+          <ScalarProperty Name="NOM_CLIENT" ColumnName="NOM_CLIENT" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="IDPAIMENT" ColumnName="IDPAIMENT" />
+          <ScalarProperty Name="NUMERO_COMMANDE" ColumnName="NUMERO_COMMANDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListeCommandeEmportV2">
+      <EntityTypeMapping TypeName="GUEGUENModel.ListeCommandeEmportV2">
+        <MappingFragment StoreEntitySet="ListeCommandeEmportV2">
+          <ScalarProperty Name="Archiv" ColumnName="Archiv" />
+          <ScalarProperty Name="dateCommande" ColumnName="dateCommande" />
+          <ScalarProperty Name="POURCENTAGETVA" ColumnName="POURCENTAGETVA" />
+          <ScalarProperty Name="ID_RESTAURANT" ColumnName="ID_RESTAURANT" />
+          <ScalarProperty Name="NOM_CLIENT" ColumnName="NOM_CLIENT" />
+          <ScalarProperty Name="ID_CLIENT" ColumnName="ID_CLIENT" />
+          <ScalarProperty Name="IDPAIMENT" ColumnName="IDPAIMENT" />
+          <ScalarProperty Name="NUMERO_COMMANDE" ColumnName="NUMERO_COMMANDE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="v_Facture">
+      <EntityTypeMapping TypeName="GUEGUENModel.v_Facture">
+        <MappingFragment StoreEntitySet="v_Facture">
+          <ScalarProperty Name="Archiv" ColumnName="Archiv" />
+          <ScalarProperty Name="Archivsurplace" ColumnName="Archivsurplace" />
+          <ScalarProperty Name="PRENOM_CLIENT" ColumnName="PRENOM_CLIENT" />
+          <ScalarProperty Name="NOM_CLIENT" ColumnName="NOM_CLIENT" />
+          <ScalarProperty Name="IDCLIENTCOMM" ColumnName="IDCLIENTCOMM" />
+          <ScalarProperty Name="IDPAIMENT" ColumnName="IDPAIMENT" />
+          <ScalarProperty Name="dateCommande" ColumnName="dateCommande" />
+          <ScalarProperty Name="NumCommEmpor" ColumnName="NumCommEmpor" />
+          <ScalarProperty Name="NumCommSP" ColumnName="NumCommSP" />
+          <ScalarProperty Name="NumCommande" ColumnName="NumCommande" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
